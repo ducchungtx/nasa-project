@@ -5,4 +5,5 @@
 "watch": "concurrently 'npm:server' 'npm:client' ",
 
 // Script for MacOS, Linux
-"watch": "npm run server && npm run client",
+"watch": "npm run server & npm run client",
+// First command run in the background and then the second command
