@@ -13,5 +13,5 @@ Add to build script to package.json in client
 
 // MacOS, Linux
 "build": "BUILD_PATH=../server/public react-scripts build",
-// Windows
-"build": "set BUILD_PATH=../server/public && react-scripts build",
+// Windows - warn not space in "public&&" if you do that it's will build a folder public with space character before
+"build": "set BUILD_PATH=../server/public&& react-scripts build",
