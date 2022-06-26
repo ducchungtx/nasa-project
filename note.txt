@@ -7,3 +7,11 @@
 // Script for MacOS, Linux
 "watch": "npm run server & npm run client",
 // First command run in the background and then the second command
+
+// Build production from client to server/public
+Add to build script to package.json in client
+
+// MacOS, Linux
+"build": "BUILD_PATH=../server/public react-scripts build",
+// Windows
+"build": "set BUILD_PATH=../server/public && react-scripts build",
