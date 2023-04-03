@@ -1,0 +1,32 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "concurrently 'npm:install-server' 'npm:install-client'",
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client",
+    "watch": "concurrently 'npm:server' 'npm:client' ",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
+    "test": "npm test --prefix server && npm test --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ducchungtx/nasa-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ducchungtx/nasa-project/issues"
+  },
+  "homepage": "https://github.com/ducchungtx/nasa-project#readme",
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "supertest": "^6.2.4"
+  }
+}

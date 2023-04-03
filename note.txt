@@ -1,0 +1,17 @@
+"server": "npm run watch --prefix server",
+"client": "npm start --prefix client",
+
+// Script for windows
+"watch": "concurrently 'npm:server' 'npm:client' ",
+
+// Script for MacOS, Linux
+"watch": "npm run server & npm run client",
+// First command run in the background and then the second command
+
+// Build production from client to server/public
+Add to build script to package.json in client
+
+// MacOS, Linux
+"build": "BUILD_PATH=../server/public react-scripts build",
+// Windows - warn not space in "public&&" if you do that it's will build a folder public with space character before
+"build": "set BUILD_PATH=../server/public&& react-scripts build",
